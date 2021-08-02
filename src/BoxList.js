@@ -8,11 +8,16 @@ const BoxList = () => {
     width: '55px',
     height: '55px'
   }]);
+  const addNewBox = (backgroundColor, width, height) => {
+    setBoxes(boxData => (
+      [...boxData, {backgroundColor, width: width + 'px', height: height + 'px'}]
+    ))
+  }
 
   return (
     <div>
       <h2>Box List</h2>
-      <NewBoxForm />
+      <NewBoxForm addNewBox={addNewBox} />
       {boxes.map(box => 
       <Box 
         backgroundColor={box.backgroundColor}

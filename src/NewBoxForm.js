@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const NewBoxForm = () => {
+const NewBoxForm = ({ addNewBox }) => {
   const initialState = {
     backgroundColor: '',
     width: '',
@@ -16,7 +16,12 @@ const NewBoxForm = () => {
     }))
   };
   const handleSubmit = (e) => {
+    const { backgroundColor, width, height } = formData;
+
     e.preventDefault();
+    addNewBox(backgroundColor, width, height);
+    
+    setFormData(initialState);
   }
 
   return (
@@ -30,7 +35,7 @@ const NewBoxForm = () => {
         value={formData.backgroundColor}
         onChange={handleChange} 
       />
-      <label htmlFor="width">Width: </label>
+      <label htmlFor="width">Width (px): </label>
       <input 
         id="width"
         name="width" 
@@ -39,7 +44,7 @@ const NewBoxForm = () => {
         value={formData.width}
         onChange={handleChange} 
       />
-      <label htmlFor="height">Height: </label>
+      <label htmlFor="height">Height (px): </label>
       <input 
         id="height"
         name="height" 
