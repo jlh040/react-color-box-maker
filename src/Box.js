@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Box = ({ backgroundColor, width, height}) => {
+const Box = ({ removeBox, backgroundColor, width, height, id}) => {
   const style = {
     backgroundColor,
     width,
@@ -8,7 +8,10 @@ const Box = ({ backgroundColor, width, height}) => {
   }
 
   return (
-    <div style={style}>
+    <div>
+      <div style={style}>
+      </div>
+      <button onClick={() => removeBox(id)}>X</button>
     </div>
   )
 };
