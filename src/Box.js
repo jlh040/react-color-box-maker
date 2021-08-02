@@ -1,4 +1,5 @@
 import React from 'react';
+import './Box.css';
 
 const Box = ({ removeBox, backgroundColor, width, height, id}) => {
   const style = {
@@ -9,9 +10,9 @@ const Box = ({ removeBox, backgroundColor, width, height, id}) => {
 
   return (
     <div className="Box">
-      <div style={style}>
+      <div className="Box-left"style={style}>
       </div>
-      <div>
+      <div className="Box-right">
         <button onClick={() => removeBox(id)}>X</button>
       </div>
     </div>
