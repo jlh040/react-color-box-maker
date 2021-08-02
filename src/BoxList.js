@@ -8,4 +8,15 @@ const BoxList = () => {
   }]);
 };
 
+return (
+  <div>
+  {boxes.map(box => 
+    <Box 
+      backgroundColor={box.backgrouncColor}
+      height={box.height}
+      width={box.width} 
+    />)}
+  </div>
+)
+
 export default BoxList;
