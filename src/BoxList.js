@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import NewBoxForm from './NewBoxForm';
 import Box from './Box';
 
 const BoxList = () => {
@@ -11,6 +12,7 @@ const BoxList = () => {
   return (
     <div>
       <h2>Box List</h2>
+      <NewBoxForm />
       {boxes.map(box => 
       <Box 
         backgroundColor={box.backgroundColor}
