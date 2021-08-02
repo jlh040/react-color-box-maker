@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './NewBoxForm.css';
 
 const NewBoxForm = ({ addNewBox }) => {
   const initialState = {
@@ -25,36 +26,38 @@ const NewBoxForm = ({ addNewBox }) => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="bg-color">Background Color: </label>
-      <input 
-        id="bg-color"
-        name="backgroundColor" 
-        type="text" 
-        placeholder="Background Color" 
-        value={formData.backgroundColor}
-        onChange={handleChange} 
-      />
-      <label htmlFor="width">Width (px): </label>
-      <input 
-        id="width"
-        name="width" 
-        type="text" 
-        placeholder="Width" 
-        value={formData.width}
-        onChange={handleChange} 
-      />
-      <label htmlFor="height">Height (px): </label>
-      <input 
-        id="height"
-        name="height" 
-        type="text" 
-        placeholder="Height" 
-        value={formData.height}
-        onChange={handleChange} 
-      />
-      <button>Add Box</button>
-    </form>
+    <div className="NewBoxForm">
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="bg-color">Background Color: </label>
+        <input 
+          id="bg-color"
+          name="backgroundColor" 
+          type="text" 
+          placeholder="Background Color" 
+          value={formData.backgroundColor}
+          onChange={handleChange} 
+        />
+        <label htmlFor="width">Width (px): </label>
+        <input 
+          id="width"
+          name="width" 
+          type="text" 
+          placeholder="Width" 
+          value={formData.width}
+          onChange={handleChange} 
+        />
+        <label htmlFor="height">Height (px): </label>
+        <input 
+          id="height"
+          name="height" 
+          type="text" 
+          placeholder="Height" 
+          value={formData.height}
+          onChange={handleChange} 
+        />
+        <button>Add Box</button>
+      </form>
+    </div>
   )
 };
 

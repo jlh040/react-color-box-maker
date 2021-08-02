@@ -8,10 +8,12 @@ const Box = ({ removeBox, backgroundColor, width, height, id}) => {
   }
 
   return (
-    <div>
+    <div className="Box">
       <div style={style}>
       </div>
-      <button onClick={() => removeBox(id)}>X</button>
+      <div>
+        <button onClick={() => removeBox(id)}>X</button>
+      </div>
     </div>
   )
 };

@@ -22,7 +22,7 @@ const BoxList = () => {
   };
 
   return (
-    <div>
+    <div className="BoxList">
       <h2>Box List</h2>
       <NewBoxForm addNewBox={addNewBox} />
       {boxes.map(box => 
