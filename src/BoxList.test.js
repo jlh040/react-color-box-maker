@@ -32,3 +32,22 @@ it('shows a box when the form is submitted', () => {
     expect(getByText('X')).toBeInTheDocument();
     expect(queryByTestId('Box')).toBeInTheDocument();
 });
+
+it('successfully removes a box from the page', () => {
+    const { queryByTestId, getByLabelText, getByText } = render(<BoxList />);
+    const bgColorInput = getByLabelText('Background Color:');
+    const widthInput = getByLabelText('Width', {exact: false});
+    const heightInput = getByLabelText('Height', {exact: false});
+    const addBtn = getByText('Add Box');
+
+    fireEvent.change(bgColorInput, {target: {value: 'orangered'}});
+    fireEvent.change(widthInput, {target: {value: 60}});
+    fireEvent.change(heightInput, {target: {value: 60}});
+    fireEvent.click(addBtn);
+
+    expect(queryByTestId('Box')).toBeInTheDocument();
+
+    fireEvent.click(getByText('X'));
+
+    expect(queryByTestId('Box')).not.toBeInTheDocument();
+})
