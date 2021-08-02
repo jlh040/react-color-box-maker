@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { v4 as uuid } from 'uuid';
 import NewBoxForm from './NewBoxForm';
 import Box from './Box';
 
@@ -12,7 +13,10 @@ const BoxList = () => {
     setBoxes(boxData => (
       [...boxData, {backgroundColor, width: width + 'px', height: height + 'px'}]
     ))
-  }
+  };
+  const removeBox = () => {
+
+  };
 
   return (
     <div>
