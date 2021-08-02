@@ -50,4 +50,4 @@ it('successfully removes a box from the page', () => {
     fireEvent.click(getByText('X'));
 
     expect(queryByTestId('Box')).not.toBeInTheDocument();
-})
+});
