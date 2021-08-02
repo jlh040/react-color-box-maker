@@ -1,22 +1,24 @@
 import React, { useState } from 'react';
+import Box from './Box';
 
 const BoxList = () => {
   const [boxes, setBoxes] = useState([{
-    backgrouncColor: 'blue',
-    width: '30px',
-    height: '30px'
+    backgroundColor: 'blue',
+    width: '55px',
+    height: '55px'
   }]);
-};
 
-return (
-  <div>
-  {boxes.map(box => 
-    <Box 
-      backgroundColor={box.backgrouncColor}
-      height={box.height}
-      width={box.width} 
-    />)}
-  </div>
-)
+  return (
+    <div>
+      <h2>Box List</h2>
+      {boxes.map(box => 
+      <Box 
+        backgroundColor={box.backgroundColor}
+        height={box.height}
+        width={box.width} 
+      />)}
+    </div>
+  )
+};
 
 export default BoxList;
