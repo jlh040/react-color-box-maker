@@ -9,7 +9,7 @@ const Box = ({ removeBox, backgroundColor, width, height, id}) => {
   }
 
   return (
-    <div className="Box">
+    <div className="Box" data-testid="Box">
       <div className="Box-left"style={style}>
       </div>
       <div className="Box-right">

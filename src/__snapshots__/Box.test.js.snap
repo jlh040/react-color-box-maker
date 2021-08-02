@@ -4,6 +4,7 @@ exports[`matches the snapshot 1`] = `
 <DocumentFragment>
   <div
     class="Box"
+    data-testid="Box"
   >
     <div
       class="Box-left"

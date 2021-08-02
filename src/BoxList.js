@@ -4,12 +4,7 @@ import NewBoxForm from './NewBoxForm';
 import Box from './Box';
 
 const BoxList = () => {
-  const [boxes, setBoxes] = useState([{
-    backgroundColor: 'blue',
-    width: '55px',
-    height: '55px',
-    id: uuid()
-  }]);
+  const [boxes, setBoxes] = useState([]);
   const addNewBox = (backgroundColor, width, height) => {
     setBoxes(boxData => (
       [...boxData, {backgroundColor, width: width + 'px', height: height + 'px', id: uuid()}]

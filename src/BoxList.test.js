@@ -8,4 +8,11 @@ it('renders without crashing', () => {
 it('matches the snapshot', () => {
     const { asFragment } = render(<BoxList />);
     expect(asFragment()).toMatchSnapshot();
+});
+
+it('shows no boxes when the page loads', () => {
+    const { queryByTestId } = render(<BoxList />);
+    const BoxDiv = queryByTestId('Box');
+
+    expect(BoxDiv).not.toBeInTheDocument();
 })
