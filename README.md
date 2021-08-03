@@ -1,10 +1,14 @@
+# Functionality
+
+This is the first part to Springboard's 39.8.12 exercise. It is a small app that allows a user to create a colored box by entering a background color, height, and width. After submitting the info, the box appears on the page, and can also be deleted. The purpose of this exercise was to get some practice with [creating forms in React](https://reactjs.org/docs/forms.html), and also to get some practice using [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/).
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
-In the project directory, you can run:
+First run `npm install` to download all of the dependencies, then, in the project directory, you can run:
 
 ### `npm start`
 
